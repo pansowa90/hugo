@@ -6,7 +6,8 @@ const AssetsPlugin = require("assets-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: path.join(__dirname, "src", "index.js"),
+    main: path.join(__dirname, "src/js", "main.js"),
+    home: path.join(__dirname, "src/js/page", "home.js"),
   },
 
   output: {
@@ -24,13 +25,13 @@ module.exports = {
         },
       },
 
-      {test: /\.json$/, loader: "json-loader"},
+      { test: /\.json$/, loader: "json-loader" },
 
       {
         loader: "babel-loader",
         test: /\.js?$/,
         exclude: /node_modules/,
-        options: {cacheDirectory: true},
+        options: { cacheDirectory: true },
       },
 
       {
@@ -38,12 +39,6 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           "style-loader",
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              esModule: false
-            }
-          },
           "css-loader",
           "postcss-loader",
           "sass-loader",

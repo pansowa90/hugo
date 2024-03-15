@@ -35,15 +35,3 @@ a {
 :root {
   --green: green;
 }
-
-.box {
-  width: 35px;
-  height: 35px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: var(--green);
-  font-weight: 600;
-}

@@ -2,10 +2,25 @@
 
 <div class="box blue"></div>
 
-<h1>Hugo with Webpack, Sass, and PostCSS</h1>
-
-<h3>Hooray 🎉 - you've built this</h3>
-
+<div class="text text--main">
+  {{ range $num := (seq 10) }}
+    Bayko
+  {{ end }}
+</div>
+<div class="text text--next">
+  {{ range $num := (seq 10) }}
+    Bayko
+  {{ end }}
+</div>
+<div class="text text--after">
+  {{ range $num := (seq 10) }}
+    Bayko
+  {{ end }}
 </div>
 
+</div>
+  {{ $script := .Site.Data.webpack.home }}
+  {{ with $script.js }}
+    <script src="{{ relURL . }}"></script>
+  {{ end }}
 {{ end }}
