@@ -11,6 +11,10 @@
   {{ with $stylesheet.css }}
     <link href="{{ relURL . }}" rel="stylesheet">
   {{ end }}
+  {{ $script := .Site.Data.webpack.main }}
+  {{ with $script.js }}
+    <script src="{{ relURL . }}"></script>
+  {{ end }}
 </head>
 
 <body>
@@ -21,10 +25,6 @@
 
   {{ block "footer" . }}{{ partial "common/footer.html" . }}{{end}}
 
-  {{ $script := .Site.Data.webpack.main }}
-  {{ with $script.js }}
-    <script src="{{ relURL . }}"></script>
-  {{ end }}
 </body>
 
 </html>

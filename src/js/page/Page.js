@@ -5,8 +5,7 @@ export default class Page {
     this.init();
   }
 
-  init() {
-  }
+  init() { }
 
   static create(options) {
     return new this(options);

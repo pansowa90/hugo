@@ -1,7 +1,6 @@
 import './text.scss';
 
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Component from "Component/Component";
 
