@@ -1,0 +1,15 @@
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin: 1rem 0;
+  width: 100%;
+
+  a {
+    color: $color-white;
+
+    &:hover {
+      color: $color-glow;
+    }
+  }
+}

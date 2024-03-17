@@ -10,6 +10,13 @@ module.exports = {
     home: path.join(__dirname, "src/js/page", "home.js"),
   },
 
+  resolve: {
+    alias: {
+      Component: path.resolve(__dirname, 'src/js/component'),
+      Style: path.resolve(__dirname, 'src/css/'),
+    },
+  },
+
   output: {
     path: path.join(__dirname, "dist"),
     publicPath: "",
@@ -41,8 +48,17 @@ module.exports = {
           "style-loader",
           "css-loader",
           "postcss-loader",
-          "sass-loader",
-        ],
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              additionalData: `
+                  @import "src/css/base.scss";
+                `
+            },
+          }
+        ]
+
       },
     ],
   },

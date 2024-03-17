@@ -1,19 +1,19 @@
-import Component from '../component/Component';
-import Box from '../component/box/Box';
-import Text from '../component/text/Text';
+import Page from './Page';
 
-class Page extends Component {
+import Box from 'Component/box/Box';
+import Text from 'Component/text/Text';
+
+class HomePage extends Page {
   constructor() {
     super();
   }
 
   init() {
-    Box.create({
-      className: ".box"
-    });
+    super.init();
 
+    Box.create();
     Text.create();
   }
 }
 
-Page.create();
+HomePage.create();

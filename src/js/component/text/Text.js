@@ -3,7 +3,7 @@ import './text.scss';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import Component from "../Component";
+import Component from "Component/Component";
 
 export default class Text extends Component {
   constructor(options) {

@@ -1,6 +1,6 @@
 import './box.scss';
 import { gsap } from "gsap";
-import Component from "../Component";
+import Component from "Component/Component";
 
 export default class Box extends Component {
   constructor(options) {
@@ -8,7 +8,7 @@ export default class Box extends Component {
   }
 
   setup() {
-    gsap.to(this.options.className, { rotation: 180, x: 100, y: -100, duration: 1 });
+    gsap.to('.box', { rotation: 180, x: 100, y: -100, duration: 1 });
   }
 
   init() {

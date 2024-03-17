@@ -3,7 +3,20 @@ languageCode = "en-us"
 languageLang = "en"
 title = "Hugo"
 
+[markup.goldmark.renderer]
+unsafe= true
+
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
 # https://gohugo.io/getting-started/configuration/#toml-configuration
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[[menu.main]]
+url = "/"
+name = "Home"
+weight = 1
+
+[[menu.main]]
+url = "about"
+name = "About"
+weight = 2
