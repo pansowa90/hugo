@@ -1,6 +1,7 @@
-<section class="section">
-  <h1>{{ .Params.Section.Title }}</h1>
+<section class="section section--{{ .mod }}">
+  <div class="box"><div class="box__container"></div></div>
+  <h1 class="section__title">{{ .title }}</h1>
   <div class="section__content">
-    {{ .Content }}
+    {{ .content }}
   </div>
 </section>

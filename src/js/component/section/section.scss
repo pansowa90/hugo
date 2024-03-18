@@ -1,0 +1,22 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  max-width: 64rem;
+  height: 100vh;
+  margin: 2rem;
+  padding: 2rem;
+  background-color: $color-shadow;
+  border-radius: .5rem;
+
+  &__title {
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    font-size: 2rem;
+  }
+}

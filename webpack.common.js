@@ -8,6 +8,7 @@ module.exports = {
   entry: {
     main: path.join(__dirname, "src/js", "main.js"),
     home: path.join(__dirname, "src/js/page", "home.js"),
+    about: path.join(__dirname, "src/js/page", "about.js"),
   },
 
   resolve: {

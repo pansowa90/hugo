@@ -5,13 +5,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Component from "Component/Component";
 
 export default class Box extends Component {
+  static className = 'box';
+
   static component = {
     componentSel: '.box',
     containerSel: '.box__container'
   }
 
-  constructor(options) {
-    super(options);
+  constructor(element, options) {
+    super(element, options);
   }
 
   get component() {
@@ -25,15 +27,16 @@ export default class Box extends Component {
       scrollTrigger: {
         trigger: this.component.componentSel,
         start: "top",
-        end: "clamp(max)",
+        end: "bottom",
         scrub: 1,
         pin: true,
+        markers: true
       }
     });
     tl.to(this.component.containerSel, { rotation: 360, duration: 5 })
   }
 
   init() {
-    this.setup();
+    // this.setup();
   }
 }

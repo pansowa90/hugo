@@ -20,10 +20,6 @@ body {
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  background-color: #282c34;
-  color: white;
-}
-
-.section {
-  min-height: 100vh;
+  background-color: $color-dark;
+  color: $color-white;
 }

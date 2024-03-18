@@ -12,14 +12,22 @@
   pointer-events: none;
 
   &__container {
-    width: 35px;
-    height: 35px;
-    border-radius: 12px;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 2rem;
+    border-radius: .5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: $color-green;
     font-weight: 600;
+  }
+
+  &.primary {
+    .box {
+      &__container {
+        background-color: $color-glow;
+      }
+    }
   }
 }

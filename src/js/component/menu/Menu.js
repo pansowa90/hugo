@@ -2,8 +2,10 @@ import './menu.scss';
 import Component from "Component/Component";
 
 export default class Menu extends Component {
-  constructor(options) {
-    super(options);
+  static className = 'menu';
+
+  constructor(element, options) {
+    super(element, options);
   }
 
   setup() {

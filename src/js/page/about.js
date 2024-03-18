@@ -13,12 +13,13 @@ class HomePage extends Page {
     this.element.querySelectorAll('.section').forEach(element => {
       Section.create({ element });
     });
+    this.animateSection();
   }
 
-  animateSections() {
+  animateSection() {
     let tl = gsap.timeline({ delay: .25 });
 
-    tl.from('.section--welcome', {
+    tl.from('.section--main', {
       y: 400,
       opacity: 0,
       ease: 'power4',
